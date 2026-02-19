@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sensor de Movimento ESP-32</title>
+</head>
+<body>
+    <h1>Sensor de Movimento com ESP-32</h1>
+    <p style="font-size: 24px;">Status: 
+        <span id="status" style="color:red;">Sem movimento</span>
+    </p>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/@microsoft/signalr@8.0.0/dist/browser/signalr.min.js"></script>
+
+
+<script>
+    const statusEl = document.getElementById("status");
+
+    const connection = new signalR.HubConnectionBuilder()
+        .withUrl("http://localhost:5022/espHub") // ajuste a porta
+        .withAutomaticReconnect()
+        .build();
+
+    // Evento que o backend envia
+    connection.on("ReceiveMessage", (message) => {
+        console.log("Mensagem recebida:", message);
+        statusEl.innerText = message;
+        statusEl.style.color = "green";
+
+        setTimeout(() =>{
+            statusEl.innerText = "Sem movimento";
+            statusEl.style.color = "red";
+        }, 3000);
+    });
+
+    async function start() {
+        try {
+            await connection.start();
+            console.log("Conectado ao SignalR");
+        } catch (err) {
+            console.error(err);
+            setTimeout(start, 3000);
+        }
+    }
+
+    start();
+</script>
+</html>

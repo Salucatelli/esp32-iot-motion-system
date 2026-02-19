@@ -7,7 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 var rabbitHost = builder.Configuration["RABBITMQ_HOST"] ?? "localhost";
 var rabbitUser = builder.Configuration["RABBITMQ_USER"] ?? "user";
 var rabbitPass = builder.Configuration["RABBITMQ_PASS"] ?? "pass";
-var corsOrigin = builder.Configuration["CORS_ORIGIN"] ?? "localhost:3000";
+var corsOrigin = builder.Configuration["CORS_ORIGIN"] ?? "http://127.0.0.1:5500";
 
 // Adds signalR
 builder.Services.AddSignalR();
@@ -27,7 +27,7 @@ builder.Services.AddCors(options =>
     options.AddPolicy("AllowFrontend",
         policy =>
         {
-            policy.WithOrigins(corsOrigin) 
+            policy.WithOrigins(corsOrigin)
                   .AllowAnyHeader()
                   .AllowAnyMethod()
                   .AllowCredentials(); // necessário para SignalR

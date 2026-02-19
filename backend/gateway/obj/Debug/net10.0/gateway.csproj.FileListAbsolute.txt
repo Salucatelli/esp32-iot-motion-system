@@ -30,3 +30,4 @@ D:\Prog\Meus Projetos\esp-sensor-movimento\esp32-iot-motion-system\backend\gatew
 D:\Prog\Meus Projetos\esp-sensor-movimento\esp32-iot-motion-system\backend\gateway\obj\Debug\net10.0\gateway.pdb
 D:\Prog\Meus Projetos\esp-sensor-movimento\esp32-iot-motion-system\backend\gateway\obj\Debug\net10.0\gateway.genruntimeconfig.cache
 D:\Prog\Meus Projetos\esp-sensor-movimento\esp32-iot-motion-system\backend\gateway\obj\Debug\net10.0\ref\gateway.dll
+D:\Prog\Meus Projetos\esp-sensor-movimento\esp32-iot-motion-system\backend\gateway\obj\Debug\net10.0\gateway.sourcelink.json
