@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "E4ASlJo0htc=",
+  "success": true,
+  "projectFilePath": "D:\\Prog\\Meus Projetos\\esp-sensor-movimento\\esp32-iot-motion-system\\backend\\gateway\\gateway.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\saluc\\.nuget\\packages\\rabbitmq.client\\7.2.0\\rabbitmq.client.7.2.0.nupkg.sha512"
+  ],
+  "logs": []
+}
