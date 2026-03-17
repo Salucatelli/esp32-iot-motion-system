@@ -106,7 +106,11 @@ esp32-iot-motion-system/
 └── README.md
 
 ---
----
+
+## Video showing it working
+
+https://github.com/user-attachments/assets/1f7b49de-3070-42de-bdb0-79c5db89f4f3
+
 
 # 🇧🇷 Versão em Portugês 
 
